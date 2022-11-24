@@ -1,25 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import Navigation from "./components/Navigation";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex justify-center flex-col">
+      <Navigation />
+      <h1 className="text-4xl md:text-3xl font-bold underline bg-red-500">
+        Hello world!
+      </h1>
     </div>
   );
 }
-
-export default App;
