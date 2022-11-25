@@ -1,9 +1,15 @@
 import Navigation from "./components/Navigation";
 import "./App.css"
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getMovieList } from "./api/api_movie";
 
 
 export default function App() {
+  useEffect(() => {
+    getMovieList().then((res) => {
+      setPopularMovies(res);
+    });
+  }, []);
   const [popularMovies, setPopularMovies] = useState([]);
   const search = (query) => {
     console.log({ query });
