@@ -31,6 +31,16 @@
     width: 500px;
     color: black;
   }
+
+  .Movie-search {
+    height: 48;
+    font-size: 24px;
+    margin-bottom: 32px;
+    padding: 16px;
+    font-weight: bold;
+    width: 500px;
+  }
+
   .Movie-title {
     height: 60px;
     margin-top: 26px;
