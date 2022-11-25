@@ -16,3 +16,36 @@
   .App-link {
     color: #61dafb;
   }
+
+  .Movie-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .Movie-wrapper {
+    background-color: antiquewhite;
+    width: 500px;
+    color: black;
+  }
+  .Movie-title {
+    height: 60px;
+    margin-top: 26px;
+    font-weight: bold;
+  }
+  
+  .Movie-date {
+    margin-top: 26px;
+    font-style: italic;
+  }
+  
+  .Movie-rate {
+    color: red;
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: underline;
+  }
