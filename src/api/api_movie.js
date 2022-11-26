@@ -9,7 +9,14 @@ export const getMovieList = async () => {
   return movie.data.results;
 };
 
+export const getMovieDetail = async (props) => {
+  const detail = await axios.get(
+    `${baseUrl}/movie/${props.id}?api_key=${apiKey}`
+  );
+  return detail.data.results;
+};
+
 export const searchMovie = async (q) => {
   const search = await axios.get(q);
-  return;
+  return search.data.results;
 };

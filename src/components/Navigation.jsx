@@ -26,9 +26,9 @@ function Navigation() {
             <li>
               <a
                 className="px-3 py-2 text-md font-medium leading-snug text-primary-3 md:text-blue-400 hover:opacity-75x"
-                href="/home"
+                href="/"
               >
-                Music
+                Movie
               </a>
             </li>
             <li>
@@ -36,7 +36,7 @@ function Navigation() {
                 className="px-3 py-2 text-md font-medium leading-snug text-primary-3 md:text-blue-400 hover:opacity-75x"
                 href="/home"
               >
-                Video
+                Music
               </a>
             </li>
             <li>

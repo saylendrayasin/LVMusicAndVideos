@@ -1,39 +1,23 @@
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Movies from "./pages/Movies";
+import Details from "./pages/Details";
 import Navigation from "./components/Navigation";
-import "./App.css"
-import { useState, useEffect } from "react";
-import { getMovieList } from "./api/api_movie";
+import MoviesDetails from "./components/MoviesDetail";
 
-
-export default function App() {
-  useEffect(() => {
-    getMovieList().then((res) => {
-      setPopularMovies(res);
-    });
-  }, []);
-  const [popularMovies, setPopularMovies] = useState([]);
-  const search = (query) => {
-    console.log({ query });
-  };
+function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Navigation />
-      <header className="App-header">
-        <h1>Hallo</h1>
-        <input
-          className="Movie-search"
-          placeholder="Cari Film Kesayangan..."
-          onChange={({ target }) => search(target.value)}
-        />
-        <div className="Movie-container">
-          <div className="Movie-wrapper">
-            <div className="Movie-title">Contoh</div>
-            <img className="Movie-image" src="https://placehold.it/100x100" />
-            <div className="Movie-date">20-11-2022</div>
-            <div className="Movie-rate">7.9</div>
-          </div>
-        </div>
-      </header>
-      
-    </div>
+      <Routes>
+        <Route path="/" element={<Movies />} />
+        {/* <Route path="/About" element={<About />} /> */}
+        <Route path="/details" element={<Details />}>
+          <Route path=":movie_id" element={<MoviesDetails />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
+
+export default App;
