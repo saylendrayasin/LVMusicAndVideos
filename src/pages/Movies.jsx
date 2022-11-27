@@ -35,20 +35,20 @@ export default function App() {
   // }
 
   return (
-    <div className=" flex mt-20 text-center">
-      <header className=" bg-slate-900 h-full w-full flex flex-col items-center justify-center text-[22px] md:text-[25px] text-white">
+    <div className=" flex mt-0 text-center">
+      <header className=" bg-black h-full w-full flex flex-col items-center justify-center text-[22px] md:text-[25px] text-white">
         <h1 className="font-bold text-3xl my-8 text-gray-400">
-          LVMusicAndMovie
+          LVMusicAndMovies
         </h1>
-        <div className="flex w-[450px] lg:w-[650px] h-16 mb-6 py-2 gap-2">
+        <div className="flex w-[300px] lg:w-[650px] h-16 mb-6 py-2 gap-2">
           <input
-            className="h-auto p-2 text-lg font-semibold font-serif w-3/4 text-black rounded-md"
-            placeholder="Cari Film..."
+            className="h-auto p-2 text-sm lg:text-lg font-semibold font-serif w-4/5 text-black rounded-md"
+            placeholder="Search Movies..."
             onChange={cari}
             value={textMovies}
           />
           <button
-            className="font-bold text-[18px] text-black w-1/4 h-auto bg-slate-300 justify-center rounded-md hover:bg-slate-500 "
+            className="font-bold text-[14px] lg:text-lg text-black w-1/5 h-auto bg-slate-300 justify-center rounded-md hover:bg-slate-500 "
             onClick={clickCari}
           >
             Search
