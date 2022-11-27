@@ -16,7 +16,7 @@ function Details() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div>
+    <div className="flex">
       <MoviesDetail movie={movie} />
     </div>
   );

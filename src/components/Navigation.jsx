@@ -1,57 +1,90 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import React from "react";
 
 function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+  const [isActivated, setIsActivated] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 1) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
-    <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-white lg:bg-transparent shadow-lg lg:shadow-none border-b-2 lg:border-none mb-3 ">
-      <div className="container mx-auto flex flex-wrap flex-col md:flex-row justify-between items-start">
-        <div className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
-          <a className="flex font-bold font-logo text-[20px] " href="/">
-            <img src="https://placehold.it/100x100" alt="LV" />
-          </a>
-          <button
-            className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <i className="fas fa-bars" />
-          </button>
-        </div>
-        <div
-          className={
-            // eslint-disable-next-line prefer-template, operator-linebreak
-            "md:flex flex-grow items-start" + (isOpen ? "flex" : " hidden")
-          }
-        >
-          <ul className="flex flex-col md:flex-row justify-center list-none mt-2 md:ml-auto">
-            <li>
-              <a
-                className="px-3 py-2 text-md font-medium leading-snug text-primary-3 md:text-blue-400 hover:opacity-75x"
-                href="/"
-              >
-                Movie
-              </a>
-            </li>
-            <li>
-              <a
-                className="px-3 py-2 text-md font-medium leading-snug text-primary-3 md:text-blue-400 hover:opacity-75x"
-                href="/home"
-              >
-                Music
-              </a>
-            </li>
-            <li>
-              <a
-                className="px-3 py-2 text-md font-medium leading-snug text-primary-3 md:text-blue-400 hover:opacity-75x"
-                href="/home"
-              >
-                About
-              </a>
-            </li>
-          </ul>
+    <header
+      className={
+        navbar
+          ? "navbar-fixed bg-transparent top-0 left-0 w-full flex items-center z-10"
+          : "absolute bg-transparent top-0 left-0 w-full flex items-center z-10"
+      }
+    >
+      <div className="container">
+        <div className="flex items-center justify-between relative">
+          <div className="px-4">
+            <a
+              href="#home"
+              className="font-bold text-2xl text-dark block py-6 "
+            >
+              𝓛𝓪𝓼 𝓥𝓮𝓰𝓪𝓼
+            </a>
+          </div>
+          <div className="flex items-center px-4 ">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              onClick={() => setIsActivated(!isActivated)}
+              className={
+                isActivated
+                  ? "block absolute right-4 hamburger-active lg:hidden"
+                  : "block absolute right-4 lg:hidden"
+              }
+            >
+              <span className="hamburger-line transition duration-300 ease-in-out origin-top-left "></span>
+              <span className="hamburger-line transition duration-300 ease-in-out"></span>
+              <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+            <nav
+              id="nav-menu"
+              className={`lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full 
+              ${isActivated ? "block" : "hidden"}`}
+            >
+              <ul className="block lg:flex">
+                <li className="group">
+                  <a
+                    href="/"
+                    className="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                  >
+                    Movie
+                  </a>
+                </li>
+                <li className="group">
+                  <a
+                    href="#home"
+                    className="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                  >
+                    Music
+                  </a>
+                </li>
+                <li className="group">
+                  <a
+                    href="#home"
+                    className="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                  >
+                    About
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
-
 export default Navigation;
