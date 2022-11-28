@@ -15,9 +15,11 @@ function Details() {
       .then((data) => setMovie(data));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  console.log(movie);
   return (
-    <div>
-      <MoviesDetail movie={movie} />
+    <div className="flex min-h-screen bg-black">
+      <MoviesDetail key={movie.id} movie={movie} />
     </div>
   );
 }

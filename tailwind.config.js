@@ -2,14 +2,18 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: "16px",
+    },
     extend: {
-      flexBasis: {
-        "1/7": "14.2857143%",
-        "2/7": "28.5714286%",
-        "3/7": "42.8571429%",
-        "4/7": "57.1428571%",
-        "5/7": "71.4285714%",
-        "6/7": "85.7142857%",
+      colors: {
+        primary: "#0ea5e9",
+        second: "#64748b",
+        dark: "#0c4a6e",
+      },
+      screens: {
+        // "2xl": "1420px",
       },
     },
   },
