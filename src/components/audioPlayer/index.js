@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from "react";
 import "./audioPlayer.css";
 import Controls from "./controls";
@@ -49,7 +50,6 @@ export default function AudioPlayer({
         audioRef.current.pause();
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPlaying]);
 
   useEffect(() => {
@@ -63,8 +63,6 @@ export default function AudioPlayer({
     } else {
       isReady.current = true;
     }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
   useEffect(() => {
