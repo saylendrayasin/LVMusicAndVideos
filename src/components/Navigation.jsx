@@ -56,7 +56,7 @@ function Navigation() {
                 </li>
                 <li className="group">
                   <a
-                    href="#home"
+                    href="/about"
                     className="text-xl font-bold text-black lg:text-white py-2 mx-8 flex group-hover:text-primary"
                   >
                     About
