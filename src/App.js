@@ -1,14 +1,12 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Movies from "./pages/Movies";
-import Details from "./pages/Details";
-import Navigation from "./components/Navigation";
-import MoviesDetails from "./components/MoviesDetail";
 import Home from "./pages/home";
 
-
 function App() {
-  return <div><Home /></div>
+  return (
+    <div>
+      <Home />
+    </div>
+  );
   // (
   //   <BrowserRouter>
   //     <Navigation />
