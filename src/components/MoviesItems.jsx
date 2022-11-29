@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function MoviesItems(props) {
   console.log(props.movie);
   return (
-    <div className="flex flex-col bg-gray-200 w-[300px] h-[500px] lg:w-[320px] lg:h-[650px] sm:h-auto text-black justify-center items-center gap-2 rounded-2xl overflow-hidden">
+    <div className="flex flex-col hover:bg-gray-200 w-[300px] h-[500px] lg:w-[320px] lg:h-[650px] sm:h-auto text-white hover:text-black justify-center items-center gap-2 rounded-2xl overflow-hidden bg-transparent delay-150">
       <div className="h-25 md:h-15 mt-2 px-1 font-bold text-xl">
         {props.movie.title}
       </div>
@@ -21,7 +21,7 @@ function MoviesItems(props) {
       <div className="text-red-600 text-lg md:text-xl font-bold underline">
         {props.movie.vote_average}
       </div>
-      <div className="mb-1 font-semibold hover:text-primary text-lg md:text-xl">
+      <div className="mb-1 font-semibold hover:text-primary text-lg md:text-lg">
         <Link to={`/details/${props.movie.id}`}>Details</Link>
       </div>
     </div>

@@ -14,6 +14,7 @@ export default function App() {
 
   const PopularMovie = () => {
     return popularMovies.map((movie) => {
+      console.log(movie);
       return <MoviesItems key={movie.id} movie={movie} />;
     });
   };
@@ -42,13 +43,13 @@ export default function App() {
         </h1>
         <div className="flex w-[300px] lg:w-[650px] h-16 mb-6 py-2 gap-2">
           <input
-            className="h-auto p-2 text-sm lg:text-lg font-semibold font-serif w-4/5 text-black rounded-md"
+            className="h-auto p-2 text-sm lg:text-lg font-semibold font-serif w-4/5 text-primary rounded-md hover:ring-primary hover:ring-2 focus:outline-primary focus:ring-3 focus:ring-primary focus:ring-opacity-90 focus:border-primary"
             placeholder="Search Movies..."
             onChange={cari}
             value={textMovies}
           />
           <button
-            className="font-bold text-[14px] lg:text-lg text-black w-1/5 h-auto bg-slate-300 justify-center rounded-md hover:bg-slate-500 "
+            className="font-bold text-[14px] lg:text-lg text-primary hover:text-white w-1/5 h-auto bg-gray-400 justify-center rounded-md hover:bg-primary "
             onClick={clickCari}
           >
             Search

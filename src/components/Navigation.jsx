@@ -11,7 +11,7 @@ function Navigation() {
           <div className="px-4">
             <a
               href="#home"
-              className="font-bold text-2xl text-white block py-6 "
+              className="font-bold text-4xl text-red-600 block py-6 "
             >
               𝓛𝓪𝓼 𝓥𝓮𝓰𝓪𝓼
             </a>
@@ -41,7 +41,7 @@ function Navigation() {
                 <li className="group">
                   <a
                     href="/"
-                    className="text-base font-bold text-black lg:text-white py-2 mx-8 flex group-hover:text-primary"
+                    className="text-xl font-bold text-black lg:text-white py-2 mx-8 flex group-hover:text-primary"
                   >
                     Movies
                   </a>
@@ -49,7 +49,7 @@ function Navigation() {
                 <li className="group">
                   <a
                     href="#home"
-                    className="text-base font-bold text-black lg:text-white py-2 mx-8 flex group-hover:text-primary"
+                    className="text-xl font-bold text-black lg:text-white py-2 mx-8 flex group-hover:text-primary"
                   >
                     Music
                   </a>
@@ -57,7 +57,7 @@ function Navigation() {
                 <li className="group">
                   <a
                     href="#home"
-                    className="text-base font-bold text-black lg:text-white py-2 mx-8 flex group-hover:text-primary"
+                    className="text-xl font-bold text-black lg:text-white py-2 mx-8 flex group-hover:text-primary"
                   >
                     About
                   </a>
