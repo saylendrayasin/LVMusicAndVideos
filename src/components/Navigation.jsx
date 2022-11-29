@@ -5,13 +5,13 @@ function Navigation() {
   const [isActivated, setIsActivated] = useState(false);
 
   return (
-    <header className="sticky bg-black opacity-95 top-0 left-0 w-full flex items-center z-10">
+    <header className="sticky top-0 left-0 z-10 flex w-full items-center bg-black opacity-95">
       <div className="container">
-        <div className="flex items-center justify-between relative">
+        <div className="relative flex items-center justify-between">
           <div className="px-4">
             <a
               href="#home"
-              className="font-bold text-4xl text-red-600 block py-6 "
+              className="block py-6 text-4xl font-bold text-red-600 "
             >
               𝓛𝓪𝓼 𝓥𝓮𝓰𝓪𝓼
             </a>
@@ -24,24 +24,24 @@ function Navigation() {
               onClick={() => setIsActivated(!isActivated)}
               className={
                 isActivated
-                  ? "block absolute right-4 hamburger-active lg:hidden"
-                  : "block absolute right-4 lg:hidden"
+                  ? "hamburger-active absolute right-4 block lg:hidden"
+                  : "absolute right-4 block lg:hidden"
               }
             >
-              <span className="hamburger-line transition duration-300 ease-in-out origin-top-left "></span>
+              <span className="hamburger-line origin-top-left transition duration-300 ease-in-out "></span>
               <span className="hamburger-line transition duration-300 ease-in-out"></span>
-              <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+              <span className="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
             </button>
             <nav
               id="nav-menu"
-              className={`lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full 
+              className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none 
               ${isActivated ? "block" : "hidden"}`}
             >
               <ul className="block lg:flex">
                 <li className="group">
                   <a
                     href="/"
-                    className="text-xl font-bold text-black lg:text-white py-2 mx-8 flex group-hover:text-primary"
+                    className="mx-8 flex py-2 text-xl font-bold text-black group-hover:text-primary lg:text-white"
                   >
                     Movies
                   </a>
@@ -49,7 +49,7 @@ function Navigation() {
                 <li className="group">
                   <a
                     href="#home"
-                    className="text-xl font-bold text-black lg:text-white py-2 mx-8 flex group-hover:text-primary"
+                    className="mx-8 flex py-2 text-xl font-bold text-black group-hover:text-primary lg:text-white"
                   >
                     Music
                   </a>
@@ -57,7 +57,7 @@ function Navigation() {
                 <li className="group">
                   <a
                     href="/about"
-                    className="text-xl font-bold text-black lg:text-white py-2 mx-8 flex group-hover:text-primary"
+                    className="mx-8 flex py-2 text-xl font-bold text-black group-hover:text-primary lg:text-white"
                   >
                     About
                   </a>

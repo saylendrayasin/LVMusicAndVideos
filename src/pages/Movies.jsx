@@ -36,27 +36,27 @@ export default function App() {
   // }
 
   return (
-    <div className=" flex mt-0 text-center">
-      <header className=" bg-black h-full w-full flex flex-col items-center justify-center text-[22px] md:text-[25px] text-white">
-        <h1 className="font-bold text-3xl my-8 text-gray-400">
+    <div className=" mt-0 flex text-center">
+      <header className=" flex h-full w-full flex-col items-center justify-center bg-black text-[22px] text-white md:text-[25px]">
+        <h1 className="my-8 text-3xl font-bold text-gray-400">
           LVMusicAndMovies
         </h1>
-        <div className="flex w-[300px] lg:w-[650px] h-16 mb-6 py-2 gap-2">
+        <div className="mb-6 flex h-16 w-[300px] gap-2 py-2 lg:w-[650px]">
           <input
-            className="h-auto p-2 text-sm lg:text-lg font-semibold font-serif w-4/5 text-primary rounded-md hover:ring-primary hover:ring-2 focus:outline-primary focus:ring-3 focus:ring-primary focus:ring-opacity-90 focus:border-primary"
+            className="focus:ring-3 h-auto w-4/5 rounded-md p-2 font-serif text-sm font-semibold text-primary hover:ring-2 hover:ring-primary focus:border-primary focus:outline-primary focus:ring-primary focus:ring-opacity-90 lg:text-lg"
             placeholder="Search Movies..."
             onChange={cari}
             value={textMovies}
           />
           <button
-            className="font-bold text-[14px] lg:text-lg text-primary hover:text-white w-1/5 h-auto bg-gray-400 justify-center rounded-md hover:bg-primary "
+            className="h-auto w-1/5 justify-center rounded-md bg-gray-400 text-[14px] font-bold text-primary hover:bg-primary hover:text-white lg:text-lg "
             onClick={clickCari}
           >
             Search
           </button>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-[20px]">
+        <div className="flex flex-wrap items-center justify-center gap-[20px]">
           <PopularMovie />
         </div>
       </header>
