@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import React from "react";
 
 function Navigation() {
@@ -39,28 +40,28 @@ function Navigation() {
             >
               <ul className="block lg:flex">
                 <li className="group">
-                  <a
-                    href="/"
+                  <Link
                     className="mx-8 flex py-2 text-xl font-bold text-black group-hover:text-primary lg:text-white"
+                    to={`/`}
                   >
                     Movies
-                  </a>
+                  </Link>
                 </li>
                 <li className="group">
                   <a
-                    href="#home"
+                    href="https://youtube.com"
                     className="mx-8 flex py-2 text-xl font-bold text-black group-hover:text-primary lg:text-white"
                   >
                     Music
                   </a>
                 </li>
                 <li className="group">
-                  <a
-                    href="/about"
+                  <Link
                     className="mx-8 flex py-2 text-xl font-bold text-black group-hover:text-primary lg:text-white"
+                    to={`/about`}
                   >
-                    About
-                  </a>
+                    About Us
+                  </Link>
                 </li>
               </ul>
             </nav>
