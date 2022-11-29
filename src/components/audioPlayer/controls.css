@@ -23,7 +23,7 @@
     width: 70px;
     height: 70px;
     border-radius: 30px;
-    background-color: #c96850;
+    background-color: #cd2626;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -32,7 +32,7 @@
 }
   
 .play-pause-btn.active {
-    box-shadow: inset -4px -4px 10px #ff8769, inset 4px 4px 10px 1px #753d30;
+    box-shadow: inset -4px -4px 10px #cd2626, inset 4px 4px 10px 1px #753d30;
 }
   
 .play-pause-btn:hover {

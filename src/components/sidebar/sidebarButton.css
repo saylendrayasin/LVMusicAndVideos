@@ -17,7 +17,7 @@ a {
 }
 
 .btn-body.active{
-    background-color: #dc2626;
+    background-color: #f15858;
     color: #fff;
     transform: scale(1.05);
 }

@@ -26,7 +26,7 @@ export default function ProgressCircle({ percentage, isPlaying, size, color, ima
         <div className="progress-circle flex">
           <svg width={size} height={size}>
             <g>
-              <Circle strokeWidth={"0.4rem"} color="#3B4F73" size={size} />
+              <Circle strokeWidth={"0.4rem"} color="#cd2626" size={size} />
               <Circle
                 strokeWidth={"0.6rem"}
                 color={color}
