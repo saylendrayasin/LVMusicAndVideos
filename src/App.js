@@ -4,11 +4,8 @@ import Movies from "./pages/Movies";
 import Details from "./pages/Details";
 import Navigation from "./components/Navigation";
 import MoviesDetails from "./components/MoviesDetail";
-<<<<<<< HEAD
 import AboutUs from "./pages/AboutUs";
-=======
 import Footer from "./components/Footer";
->>>>>>> c8742cb0cbc0fc24b7dbe81843d5e93e069b81e3
 
 function App() {
   return (
