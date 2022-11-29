@@ -4,6 +4,7 @@ import Movies from "./pages/Movies";
 import Details from "./pages/Details";
 import Navigation from "./components/Navigation";
 import MoviesDetails from "./components/MoviesDetail";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path=":movie_id" element={<MoviesDetails />} />
         </Route>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
