@@ -19,7 +19,7 @@ function App() {
           <Route path=":movie_id" element={<MoviesDetails />} />
         </Route>
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 }

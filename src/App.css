@@ -1,61 +1,61 @@
 .App {
-    text-align: center;
-  }
-  
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
-  .App-link {
-    color: #61dafb;
-  }
+  text-align: center;
+}
 
-  .Movie-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .Movie-wrapper {
-    background-color: antiquewhite;
-    width: 500px;
-    color: black;
-  }
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 
-  .Movie-search {
-    height: 48;
-    font-size: 24px;
-    margin-bottom: 32px;
-    padding: 16px;
-    font-weight: bold;
-    width: 500px;
-  }
+.App-link {
+  color: #61dafb;
+}
 
-  .Movie-title {
-    height: 60px;
-    margin-top: 26px;
-    font-weight: bold;
-  }
-  
-  .Movie-date {
-    margin-top: 26px;
-    font-style: italic;
-  }
-  
-  .Movie-rate {
-    color: red;
-    margin-bottom: 24px;
-    font-weight: bold;
-    font-size: 1.2em;
-    text-decoration: underline;
-  }
+.Movie-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.Movie-wrapper {
+  background-color: antiquewhite;
+  width: 500px;
+  color: black;
+}
+
+.Movie-search {
+  height: 48;
+  font-size: 24px;
+  margin-bottom: 32px;
+  padding: 16px;
+  font-weight: bold;
+  width: 500px;
+}
+
+.Movie-title {
+  height: 60px;
+  margin-top: 26px;
+  font-weight: bold;
+}
+
+.Movie-date {
+  margin-top: 26px;
+  font-style: italic;
+}
+
+.Movie-rate {
+  color: red;
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
