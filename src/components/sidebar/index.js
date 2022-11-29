@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./sidebar.css";
 import SidebarButton from "./sidebarButton";
-import { MdFavorite } from "react-icons/md";
-import { FaGripfire, FaPlay } from "react-icons/fa";
+import { FaInfo, FaPlay } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
-import { MdSpaceDashboard } from "react-icons/md";
 import apiClient from "../../spotify";
 
 export default function Sidebar() {
@@ -25,13 +23,14 @@ export default function Sidebar() {
         alt="profile"
         />
         <div>
-            <SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard />} />
-            <SidebarButton title="Trending" to="/trending" icon={<FaGripfire />} />
+            {/* <SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard />} /> */}
+            {/* <SidebarButton title="Trending" to="/trending" icon={<FaGripfire />} /> */}
             <SidebarButton title="Player" to="/player" icon={<FaPlay />} />
-            <SidebarButton title="Favorites" to="/favorites" icon={<MdFavorite />} />
+            {/* <SidebarButton title="Favorites" to="/favorites" icon={<MdFavorite />} /> */}
             <SidebarButton title="Library" to="/" icon={<IoLibrary />} />
+            <SidebarButton title="About Us" to="/about" icon={<FaInfo />} />
         </div>
-        <SidebarButton title="Sign Out" to="" icon={<FaSignOutAlt />} />
+        <SidebarButton title="Exit" to="" icon={<FaSignOutAlt />} />
     </div>
   );
 }

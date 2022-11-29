@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Trending() {
+export default function About() {
   return <div className="screen-container">trending</div>;
 }

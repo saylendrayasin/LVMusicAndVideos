@@ -13,11 +13,11 @@ a {
     flex-direction: column;
     margin: 5px auto;
     transition: all 0.2s ease;
-    background-color: rgba(244, 187, 146,0.0);
+    background-color: #dc2626;
 }
 
 .btn-body.active{
-    background-color: rgba(244, 187, 146,1);
+    background-color: #dc2626;
     color: #fff;
     transform: scale(1.05);
 }
